@@ -1,0 +1,102 @@
+const darkButton = document.querySelector("#dark");
+const lightButton = document.querySelector("#light");
+
+darkButton.addEventListener("click", function() {
+    document.body.classList.add("dark-mode"); 
+    document.body.classList.remove("light-mode"); 
+    document.body.style.backgroundImage = "none"
+    document.body.style.backgroundColor = "RGB(18, 18, 18)";
+    document.body.style.color = "white"; 
+    const calendar = document.getElementById("calendar");
+    const calendarHeader = document.querySelector("#calendar-header button:first-child");
+    const calendarHeader2 = document.querySelector("#calendar-header button:last-child");
+    const monthyear = document.querySelector("#month-year :first-child")
+    const dark = document.querySelector("#mode button:first-child");
+    const light = document.querySelector("#mode button:last-child");
+    const inputs = document.querySelectorAll("#login-form input");
+    const allTextElements = document.querySelectorAll("a,li, p, h1, h2, h3, span, input");
+    allTextElements.forEach(element => {
+        element.style.color = "white";
+    });
+    inputs.forEach(input => {
+        input.style.color = "white"; 
+        input.style.border = "1px solid white"; 
+        const placeholderStyle = document.createElement("style");
+        placeholderStyle.innerHTML = `
+            #login-form input::placeholder {
+                color: white;
+                opacity: 1; 
+            }`;
+        document.head.appendChild(placeholderStyle);
+    });
+    if (calendar) {
+        calendar.style.border = "1px solid white"; 
+    }
+    if(monthyear){
+        monthyear.style.color="white"
+    }
+    if (calendarHeader) {
+        calendarHeader.style.color = "white";
+    }
+    if (calendarHeader2) {
+        calendarHeader2.style.color = "white";
+    }
+    if (dark) {
+        dark.style.backgroundColor = "white";
+    }
+    if (light) {
+        light.style.backgroundColor = "white";
+    }
+});
+
+lightButton.addEventListener("click", function() {
+    document.body.classList.add("light-mode"); 
+    document.body.classList.remove("dark-mode"); 
+    document.body.style.backgroundImage = images[Math.floor(Math.random() * images.length)];
+    document.body.classList.add('background-image');
+    document.body.style.backgroundImage = `url('img/${chosenImage}')`;
+    document.body.style.backgroundColor = ""; 
+    document.body.style.color = ""; 
+    const monthyear = document.querySelector("#month-year :first-child")
+    const calendarHeader = document.querySelector("#calendar-header button:first-child");
+    const calendarHeader2 = document.querySelector("#calendar-header button:last-child");
+    const inputs = document.querySelectorAll("#login-form input");
+    const calendar = document.getElementById("calendar");
+    const dark = document.querySelector("#mode button:first-child");
+    const light = document.querySelector("#mode button:last-child");
+    const allTextElements = document.querySelectorAll("a,input,li, p, h1, h2, h3, span");
+    allTextElements.forEach(element => {
+        element.style.color = ""; 
+    });
+    inputs.forEach(input => {
+        input.style.color = ""; 
+        input.style.border = ""; 
+        const placeholderStyle = document.createElement("style");
+        placeholderStyle.innerHTML = `
+            #login-form input::placeholder {
+                color: black;
+                opacity: 1; 
+            }
+        `;
+        document.head.appendChild(placeholderStyle);
+    });
+    
+    if (calendar) {
+        calendar.style.border = ""; 
+    }
+    if(monthyear){
+        monthyear.style.color=""
+    }
+    if (calendarHeader) {
+        calendarHeader.style.color = "";
+    }
+    if (calendarHeader2) {
+        calendarHeader2.style.color = "";
+    }
+    if (dark) {
+        dark.style.backgroundColor = "";
+    }
+    if (light) {
+        light.style.backgroundColor = "";
+    }
+});

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <link rel="short icon" href="img/Totoro.png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/Pretendard/dist/web/static/pretendard.css">
+    <title>Planner</title>
+  </head>
+  <body>
+    <h1 id="clock"></h1>
+    <div class="overlay">
+      <form class="hidden" id="login-form">
+        <input
+          id="username"
+          required
+          maxlength="15"
+          type="text"
+          placeholder="What is your name?"
+        />
+        <input type="submit" value="Login" />
+      </form>
+      <h1 class="hidden" id="greeting"></h1>
+    </div>
+     <div id="todobox">
+      <div id="fontstyle">
+      <span class="planstyle">Today's</span>
+      <span class="planstyle">Plan</span>
+    </div>
+      <form id="todo-form">
+        <input
+          id="myinput"
+          required
+          type="text"
+          placeholder="To Do List"
+        />
+      </form>
+      <div id="listbox" >
+      <ul id="todo-list"></ul>
+    </div> 
+    <div id="line"></div>
+    <p id="completed">Completed</p>
+    <div id="completedbox"> 
+      <ul id="completed-list"></ul>
+    </div>
+    </div>
+    <div id="weather">
+      <img src="" id="icon">
+      <span id="tem"></span>
+      <span id="city"></span>
+    </div>
+  </div>
+    <div id="mode">
+      <button class="dark">
+        <img src="./img/darkbtn.png">
+      </button>
+      <button class="light">
+        <img src="./img/lightbtn.png" alt="">
+      </button>
+    </div>
+    <div id="quote-box">
+      <span id="quote"></span>
+      <span id="quote"></span>
+    </div>
+    <div id="calendar">
+      <div id="calendar-header">
+        <button id="prev-month">◀</button>
+        <span id="month-year"> </span>
+        <button id="next-month">▶</button>
+      </div>
+      <table id="calendar-table">
+        <thead>
+          <tr>
+            <th>Sun</th>
+            <th>Mon</th>
+            <th>Tue</th>
+            <th>Wed</th>
+            <th>Thu</th>
+            <th>Fri</th>
+            <th>Sat</th>
+          </tr>
+        </thead>
+        <tbody id="calendar-body"></tbody>
+      </table>
+    </div>
+    <script src="./js/quote.js"></script>
+    <script src="./js/weather.js"></script>
+    <script src="./js/clock.js"></script>
+    <script src="./js/background.js"></script>
+    <script src="./js/greeting.js"></script>
+    <script src="./js/todo.js"></script>
+    <script src="./js/darkmode.js"></script>
+    <script src="./js/calender.js"></script>
+  </body>
+</html>

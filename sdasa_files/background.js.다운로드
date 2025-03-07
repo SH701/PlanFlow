@@ -1,0 +1,17 @@
+const images = ["AM.png", "Afternoon.png", "evening.png"];
+const chosenImage = images[Math.floor(Math.random() * images.length)];
+
+const currentdate = new Date();
+const hour = currentdate.getHours();
+
+// if(hour<18){
+// document.body.classList.add("background-image");
+// document.body.style.backgroundImage = `url('img/${"Afternoon.png"}')`;
+// }
+// if(hour<18){
+//     document.body.classList.add("background-image");
+//     document.body.style.backgroundImage = `url('img/${"evening_2.png"}')`;
+// }
+
+document.body.classList.add("background-image");
+document.body.style.backgroundImage = `url('img/${"Morning.png"}')`;

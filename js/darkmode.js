@@ -15,16 +15,21 @@ function toggleMode(isDarkMode) {
         document.body.style.color = "";
     }
     
-    const elementsToUpdate = document.querySelectorAll("a, li, p, h1, h2, h3, span, input");
+    const elementsToUpdate = document.querySelectorAll("a, li, p, h1, h2, h3, span");
     elementsToUpdate.forEach(element => {
         element.style.color = isDarkMode ? "white" : "";
     });
+    const elementsToUpdate2 = document.querySelectorAll("th,td")
+    elementsToUpdate2.forEach(element=>{
+        element.style.color = isDarkMode ? "white" : "";
+        element.style.backgroundColor = isDarkMode ? "inherit" : "";
+    })
     
-    
-    const inputs = document.querySelectorAll("#login-form input,");
+    const inputs = document.querySelectorAll("#login-form input,button");
     inputs.forEach(input => {
         input.style.color = isDarkMode ? "white" : "";
-        input.style.border = isDarkMode ? "1px solid white" : "";
+        input.style.border = isDarkMode ? "0px" : "";
+        input.style.backgroundColor = isDarkMode ? "inherit" : "";
     });
     
     const placeholderColor = isDarkMode ? "white" : "black";
@@ -37,7 +42,7 @@ function toggleMode(isDarkMode) {
     document.head.appendChild(placeholderStyle);
     
     const calendar = document.getElementById("calendar");
-    if (calendar) calendar.style.border = isDarkMode ? "1px solid white" : "";
+    if (calendar) calendar.style.border = isDarkMode ? "1px solid black" : "";
     
     const monthYear = document.querySelector("#month-year :first-child");
     if (monthYear) monthYear.style.color = isDarkMode ? "white" : "";
@@ -50,6 +55,17 @@ function toggleMode(isDarkMode) {
         modeButtons[0].style.backgroundColor = isDarkMode ? "black" : "";
         modeButtons[1].style.backgroundColor = isDarkMode ? "black" : "";
     }
+
+    const calendarbody = document.querySelectorAll("#calendar-table tbody td, #calendar-table thead th");
+    calendarbody.forEach(td => {
+        td.style.border = isDarkMode ? "1px solid black" : "";
+    });
+    
+    const background = document.querySelectorAll("#weather, #calendar, #quote-box");
+    background.forEach(element => {
+        element.style.backgroundColor = isDarkMode ? "rgba(255, 255, 255, 0.05)" : "";
+    });
+
 }
 
 darkButton.addEventListener("click", () => toggleMode(true));

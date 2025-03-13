@@ -16,11 +16,11 @@ function toggleMode(isDarkMode) {
     }
     
     const elementsToUpdate = document.querySelectorAll("a, li, p, h1, h2, h3, span");
-    elementsToUpdate.forEach(element => {
+        elementsToUpdate.forEach(element => {
         element.style.color = isDarkMode ? "white" : "";
     });
     const elementsToUpdate2 = document.querySelectorAll("th,td")
-    elementsToUpdate2.forEach(element=>{
+        elementsToUpdate2.forEach(element=>{
         element.style.color = isDarkMode ? "white" : "";
         element.style.backgroundColor = isDarkMode ? "inherit" : "";
     })
@@ -28,8 +28,8 @@ function toggleMode(isDarkMode) {
     const inputs = document.querySelectorAll("#login-form input,button");
     inputs.forEach(input => {
         input.style.color = isDarkMode ? "white" : "";
-        input.style.border = isDarkMode ? "0" : "";
-        input.style.backgroundColor = isDarkMode ? "inherit" : "";
+        input.style.border = isDarkMode ? "0px" : "";
+        input.style.backgroundColor = isDarkMode ? "RGB(18, 18, 18)" : "";
     });
     
     const placeholderColor = isDarkMode ? "white" : "black";
@@ -52,8 +52,8 @@ function toggleMode(isDarkMode) {
     
     const modeButtons = document.querySelectorAll("#mode button");
     if (modeButtons.length > 1) {
-        modeButtons[0].style.backgroundColor = isDarkMode ? "black" : "";
-        modeButtons[1].style.backgroundColor = isDarkMode ? "black" : "";
+        modeButtons[0].style.backgroundColor = isDarkMode ? "RGB(18, 18, 18)" : "";
+        modeButtons[1].style.backgroundColor = isDarkMode ? "RGB(18, 18, 18)" : "";
     }
 
     const calendarbody = document.querySelectorAll("#calendar-table tbody td, #calendar-table thead th");

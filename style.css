@@ -419,8 +419,9 @@ li::before {
     width:70%;
   }
   #greeting {
+    margin-left: 50px;
     font-size: 28px;
-    letter-spacing: 1.5px;
+    letter-spacing: 1.2px;
   }
   .overlay {
     width: 80%;

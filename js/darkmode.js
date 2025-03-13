@@ -28,7 +28,7 @@ function toggleMode(isDarkMode) {
     const inputs = document.querySelectorAll("#login-form input,button");
     inputs.forEach(input => {
         input.style.color = isDarkMode ? "white" : "";
-        input.style.border = isDarkMode ? "0px" : "";
+        input.style.border = isDarkMode ? "1px soild white" : "";
         input.style.backgroundColor = isDarkMode ? "inherit" : "";
     });
     

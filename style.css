@@ -412,7 +412,7 @@ li::before {
     font-size: 1rem;
   }
   #clock {
-    font-size: 37px;
+    font-size: 42px;
     text-align: center; 
   }
   #username{
@@ -420,6 +420,7 @@ li::before {
   }
   #greeting {
     font-size: 32px;
+    letter-spacing: 1.5px;
   }
   .overlay {
     width: 80%;
@@ -432,7 +433,8 @@ li::before {
   }
   #calendar {
     max-width: 90%;
-    padding: 12px;
+    padding: 10px;
+    margin-top: 30px;
   }
   #calendar-header {
     font-size: 18px;
@@ -456,19 +458,21 @@ li::before {
     padding:10px;
     border-radius: 20px;
     margin: 0 auto;
+    margin-bottom: 30px;
   }
   #logout-button{
     height: 45px;
     width: 58px;
     font-size: 14px;
     position: absolute;
-    top:25%;
-    left:40%;
+    top:26%;
+    left:45%;
     border: 1px solid black;
   }
   #login-form {
     flex-direction: column;
     padding-top: 30px;
+    margin-bottom: 30px;
   }
   #login-form input {
     height: 45px;
@@ -485,12 +489,13 @@ li::before {
     font-size: 24px;
   }
   #quote-box{
-    position: relative; 
     width: 90%;
     margin: 20px auto; 
     background: rgba(0, 0, 0, 0.3);
     padding: 10px;
     border-radius: 20px;
+    transform: translateX(-50%);
     text-align: center;
+    position: relative;
   }
 }

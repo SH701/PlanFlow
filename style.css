@@ -260,6 +260,7 @@ li::before {
 }
 #mode button img {
   height: 40px;
+  pointer-events: none;
 }
 #mode button img:hover {
   cursor: pointer;

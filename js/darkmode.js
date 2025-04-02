@@ -2,6 +2,7 @@ const darkButton = document.querySelector(".dark");
 const lightButton = document.querySelector(".light");
 
 function toggleMode(isDarkMode) {
+    console.log(lightButton);
     document.body.classList.toggle("dark-mode", isDarkMode);
     document.body.classList.toggle("light-mode", !isDarkMode);
     
